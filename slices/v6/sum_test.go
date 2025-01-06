@@ -7,6 +7,8 @@ import (
 
 func TestSumAll(t *testing.T){
 
+	// binding a function to a local variable
+	// its a design consideration, to avoid it being exported
 	checkSums := func(t testing.TB, got, want []int) {
 		t.Helper()
 		// Go does not let you use equality operators with slices
